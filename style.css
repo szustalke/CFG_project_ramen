@@ -1,0 +1,300 @@
+* {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  font-family: murecho;
+}
+
+body {
+  background-color: #333;
+  font-family: murecho;
+}
+
+/* setting pictures as background */
+.pic1,
+.pic2,
+.pic3,
+.pic4,
+.pic5 {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.pic1 {
+  background-image: url(pic1.jpg);
+}
+.pic2 {
+  background-image: url(pic2.jpg);
+}
+.pic3 {
+  background-image: url(pic3.jpg);
+}
+.pic4 {
+  background-image: url(pic4.jpg);
+}
+.pic5 {
+  background-image: url(pic5.jpg);
+}
+
+/* nav bar */
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  background-color: rgba(248, 84, 84, 0.35);
+  height: 10vh;
+  font-family: murecho;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+}
+nav a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+nav li {
+  margin-left: 20px;
+  margin-right: 8px;
+}
+
+nav li:hover {
+  font-size: large;
+  font-weight: bold;
+}
+
+nav ul:hover {
+  background-color: rgba(248, 84, 84, 0.55);
+  transition: background-color 1s;
+}
+
+/* Home */
+
+.content-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.button-home {
+  width: 25vw;
+  height: 15vh;
+  text-align: center;
+  background-color: rgba(248, 84, 84, 0.55);
+  color: white;
+  font-family: murecho;
+  font-size: large;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.button-home a {
+  text-decoration: none;
+  color: white;
+}
+/* About */
+
+.about-box {
+  width: 300px;
+  height: 300px;
+  border: 1px solid white;
+  color: white;
+}
+
+.carousel-item {
+  height: 85vh;
+  background-color: rgba(248, 84, 84, 0.55);
+  color: white;
+  font-family: murecho;
+  font-size: large;
+}
+
+/* locations */
+
+.locations {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 400px;
+  width: 1000px;
+  border: 1px solid orange;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.locations > div {
+  height: 300px;
+  width: 300px;
+  border: 1px solid beige;
+  background-color: rgba(166, 166, 166, 0.1);
+  /* text-align: center; */
+  font-family: murecho;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.locations > div:hover {
+  background-color: rgba(166, 166, 166, 0.7);
+}
+
+/* MENU stylesheet */
+
+.order-categories {
+  width: 100%;
+  height: 90%;
+  display: grid;
+  gap: 1vw;
+  text-align: center;
+}
+
+.order-categories > div {
+  color: black;
+}
+.ramen > ul {
+  list-style: none;
+}
+
+.starters {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.ramen {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 5;
+}
+
+.drinks {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+
+.starters,
+.ramen,
+.drinks,
+.current-order {
+  background-color: rgba(226, 213, 213, 0.65);
+  font-size: large;
+  font-weight: bold;
+}
+.current-order {
+  /* positioning */
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 6;
+  /* styling */
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+.order-items {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.order-total {
+  height: 5vh;
+  margin-bottom: 2px;
+}
+
+.plus {
+  color: red;
+}
+.price {
+  margin-left: 1vw;
+}
+
+/* .add-btn {
+  font-family: murecho;
+  width: 25vw;
+  border: none;
+  height: 5vh;
+  font-size: medium;
+} */
+
+.order-total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.order-ul {
+  list-style: none;
+}
+
+/* Contact */
+.contact-box {
+  color: white;
+  margin: 5vw 5vw auto auto;
+  width: 20vw;
+  font-size: large;
+  font-family: murecho;
+}
+.contact-box a {
+  color: white;
+}
+
+.contact-box a:hover {
+  color: rgba(248, 84, 84, 0.55);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-message {
+  height: 15rem;
+  text-overflow: initial;
+  text-align: start;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  background-color: rgba(166, 166, 166, 0.7);
+}
+
+textarea {
+  height: 15rem;
+}
+
+.button-form:focus {
+  outline: none;
+}
+
+.button-form:hover {
+  background-color: transparent;
+  color: white;
+}
